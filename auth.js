@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken");
-require("dotenv").config();
+
 
 function authenticateJWT(req, res, next) {
     // * Get Authentication Header

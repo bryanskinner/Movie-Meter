@@ -1,12 +1,13 @@
+require("dotenv").config();
 const express = require("express");
 const { movies }  = require("./mockdata");
 const app = express();
-const authenticateJWT = require("./src/auth");
+const authenticateJWT = require("./auth");
 
-const usersRouter = require("./src/routes/users");
-const signupRouter = require("./src/routes/signup");
-const signinRouter = require("./src/routes/signin");
-const vinylRouter = require("./src/routes/vinyl");
+const usersRouter = require("./routes/users");
+const signupRouter = require("./routes/signup");
+const signinRouter = require("./routes/signin");
+const vinylRouter = require("./routes/vinyl");
 
 
 
