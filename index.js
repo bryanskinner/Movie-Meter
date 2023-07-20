@@ -23,7 +23,7 @@ app.use(express.json());
 app.use("/", usersRouter);
 app.use("/", signupRouter);
 app.use("/", signinRouter);
-app.use("/", authenticateJWT, vinylRouter);
+app.use("/", vinylRouter);
 
 
 
