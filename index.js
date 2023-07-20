@@ -57,8 +57,4 @@ app.get("/movies/:id", (req, res) => {
       console.log(`Listening on ${PORT}`);
     });
 
-
-
-
-    module.exports = authenticateJWT;
     
