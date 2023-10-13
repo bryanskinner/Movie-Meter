@@ -20,14 +20,14 @@ const signin = (req, res) => {
          }
 
 
-   const hashedPassword = await bcrypt.compare(password, user[0].password);
+   const hashedPassword = await bcrypt.compare(password, user[0].pwd);
 
     
     if (hashedPassword) {
       console.log(user);
     const token = jwt.sign({
       id: user[0].id, 
-      email: user[0].password,
+      email: user[0].email,
     }, process.env.DB_JWT_SECRET);
 
     
@@ -38,6 +38,7 @@ const signin = (req, res) => {
     } else {
       res.json({
         message: "Email or Username is incorrect!",
+        // token,
       });
     }
 });

@@ -1,7 +1,8 @@
-INSERT INFO users (email, password, first_name) VALUES
-('me@example.com', 'password', 'me');
+INSERT INFO users (email, pwd) VALUES
+('me@example.com', 'password');
 
-INSERT INTO vinyl (album, artist, release_year, genre) VALUES
+-- INSERT INTO vinyl (album, artist, release_year, genre, userid) VALUES
+INSERT INTO movies (title, director, release_date, genre) VALUES
   ('Abbey Road', 'The Beatles', 1969, 'Rock'),
   ('Thriller', 'Michael Jackson', 1982, 'Pop'),
   ('The Dark Side of the Moon', 'Pink Floyd', 1973, 'Progressive Rock'),

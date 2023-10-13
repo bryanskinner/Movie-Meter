@@ -3,13 +3,13 @@ const pool = require("../sql/connection");
 
 
 const signup =  async (req, res) => {
-  const { email, password, first_name, last_name } = req.body;
+  const { email, password } = req.body;
 
       const hashedPassword = await bcrypt.hash(password, 8);
 
-      pool.query('INSERT INTO ?? (??, ??, ??, ??) VALUES(?, ?, ?, ?)',
-      ["users", "email", "password", "first_name", "last_name",
-    email, hashedPassword, first_name, last_name],
+      pool.query('INSERT INTO ?? (??, ??) VALUES(?, ?)',
+      ["users", "email", "pwd",
+    email, hashedPassword],
     (err, results, fields) => {
 
 
@@ -28,9 +28,8 @@ const signup =  async (req, res) => {
 };
   
 
-
-
-
 module.exports = {
     signup,
 };
+
+
